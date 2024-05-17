@@ -21,11 +21,12 @@ public class Ball : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         rb.AddForce(Vector3.up * jumpForce);
-        //GameObject splash = Instantiate(splashImg, transform.position - new Vector3(0, 0.22f, 0f), transform.rotation);
+        GameObject splash = Instantiate(splashImg, transform.position, transform.rotation);
         //splash.transform.SetParent(other.gameObject.transform);
         //Destroy(splash, 1);
 
-        //string metarialName = other.gameObject.GetComponent<MeshRenderer>().material.name;
+        string metarialName = other.gameObject.GetComponent<MeshRenderer>().material.name;
+        Debug.Log(metarialName);
         //if (metarialName == "Unsafe Color (Instance)")
         //{
         //    gm.restartGame();
