@@ -32,7 +32,15 @@ public class Ball : MonoBehaviour
         Debug.Log(metarialName);
         if (metarialName == "Unsafe Color (Instance)")
         {
-            gm.restartGame();
+            gm.GameOver();
+            rb.velocity = Vector3.zero;
+            rb.isKinematic = true;
+        }
+        else if (metarialName == "Last Ring (Instance)")
+        {
+            gm.NextLevel();
+            rb.velocity = Vector3.zero;
+            rb.isKinematic = true;
         }
     }
 }
