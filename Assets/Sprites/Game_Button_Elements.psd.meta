@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 53cf28249f2c22d4db66c30141f2a56e
+guid: 95aa781a503c7834d852f8faee640fff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,18 +134,106 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Game_Button_Elements_1
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 3107
+        width: 873
+        height: 879
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79e2124651f4284ea8d88f95b7b12ca
+      internalID: -2036747382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game_Button_Elements_23
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 2134
+        width: 879
+        height: 885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32e9bb43a5a1d045947edf4c1debf87
+      internalID: -545969310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 27d4322b296fb6f48b485f0de7d9f8f2
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Game_Button_Elements_0: -1099589754
+      Game_Button_Elements_1: -2036747382
+      Game_Button_Elements_10: -1450805455
+      Game_Button_Elements_11: -84969221
+      Game_Button_Elements_12: -66869362
+      Game_Button_Elements_13: 59594004
+      Game_Button_Elements_14: 1785431659
+      Game_Button_Elements_15: -2140245291
+      Game_Button_Elements_16: -1779113287
+      Game_Button_Elements_17: 1793113410
+      Game_Button_Elements_18: -1082446374
+      Game_Button_Elements_19: -1826005954
+      Game_Button_Elements_2: -1839220023
+      Game_Button_Elements_20: -616856557
+      Game_Button_Elements_21: 1935560789
+      Game_Button_Elements_22: 1742919614
+      Game_Button_Elements_23: -545969310
+      Game_Button_Elements_24: 904635568
+      Game_Button_Elements_25: -1262334784
+      Game_Button_Elements_26: 1884146219
+      Game_Button_Elements_27: 1732545136
+      Game_Button_Elements_28: 1097622183
+      Game_Button_Elements_29: -221822431
+      Game_Button_Elements_3: 2122415289
+      Game_Button_Elements_30: -1014598649
+      Game_Button_Elements_31: -1910061778
+      Game_Button_Elements_32: 447388876
+      Game_Button_Elements_33: 1093193500
+      Game_Button_Elements_34: -997069040
+      Game_Button_Elements_35: -1938655366
+      Game_Button_Elements_36: -439714008
+      Game_Button_Elements_37: -1206056050
+      Game_Button_Elements_38: -900673949
+      Game_Button_Elements_39: 181943833
+      Game_Button_Elements_4: -1442318443
+      Game_Button_Elements_40: -1569304229
+      Game_Button_Elements_41: -1286081419
+      Game_Button_Elements_42: 861465689
+      Game_Button_Elements_43: 1486572628
+      Game_Button_Elements_44: -1012244000
+      Game_Button_Elements_45: 1490275115
+      Game_Button_Elements_5: -1156851045
+      Game_Button_Elements_6: -1684103062
+      Game_Button_Elements_7: -2119090773
+      Game_Button_Elements_8: -1730689928
+      Game_Button_Elements_9: -1982453902
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
