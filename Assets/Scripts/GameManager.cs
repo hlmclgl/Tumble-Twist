@@ -12,14 +12,18 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject finishUI;
     public GameObject homeUI;
+    public GameObject pauseButton;
+
 
     private bool isGameStarted = false;
 
     void Start()
     {
+        Time.timeScale = 0f;
         gameOverUI.SetActive(false);
         finishUI.SetActive(false);
         homeUI.SetActive(true);
+        pauseButton.SetActive(false);
     }
 
     private void Update()
@@ -58,16 +62,21 @@ public class GameManager : MonoBehaviour
     {
         isGameStarted = true;
         homeUI.SetActive(false);
+        pauseButton.SetActive(true);
+        Time.timeScale = 1f;
     }
 
     public void GameOver()
     {
         gameOverUI.SetActive(true);
+        pauseButton.SetActive(false) ;
         scoreNumberText.text = score.ToString();
     }
 
     public void NextLevel()
     {
         finishUI.SetActive(true);
+        pauseButton.SetActive(false ) ;
+
     }
 }
