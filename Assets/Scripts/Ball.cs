@@ -24,6 +24,7 @@ public class Ball : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         rb.AddForce(Vector3.up * jumpForce);
+        AudioManager.Instance.PlaySFX("Jump");
         GameObject splash = Instantiate(splashImg, transform.position - new Vector3(0, 0.22f, 0f), transform.rotation);
         splash.transform.SetParent(other.gameObject.transform);
         Destroy(splash, 1);
@@ -32,12 +33,14 @@ public class Ball : MonoBehaviour
         Debug.Log(metarialName);
         if (metarialName == "Unsafe Color (Instance)")
         {
+            AudioManager.Instance.PlaySFX("GameOver");
             gm.GameOver();
             rb.velocity = Vector3.zero;
             rb.isKinematic = true;
         }
         else if (metarialName == "Last Ring (Instance)")
         {
+            AudioManager.Instance.PlaySFX("MissionComplete");
             gm.NextLevel();
             rb.velocity = Vector3.zero;
             rb.isKinematic = true;
