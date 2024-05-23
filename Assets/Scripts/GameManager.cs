@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
     {
         finishUI.SetActive(true);
         pauseButton.SetActive(false ) ;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 }

@@ -2536,6 +2536,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 36e449e6d200c524f8690807b71ee5e1, type: 3}
   musicSource: {fileID: 764493229}
   sfxSource: {fileID: 1633934271}
+  musicButton: {fileID: 72997769}
+  musicOffButton: {fileID: 894257728}
 --- !u!1 &1557799137
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ public class Ball : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.isKinematic = true;
         }
-        else if (metarialName == "Last Ring (Instance)")
+        else if (metarialName == "Finish (Instance)")
         {
             AudioManager.Instance.PlaySFX("MissionComplete");
             gm.NextLevel();

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseButtonController : MonoBehaviour
 {
@@ -50,4 +51,16 @@ public class PauseButtonController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void ToggleMusic()
+    {
+        AudioManager.Instance.ToggleMusic();
+    }
+
+    public void ToggleSFX()
+    {
+        AudioManager.Instance.ToggleSFX();
+    }
+
+   
 }

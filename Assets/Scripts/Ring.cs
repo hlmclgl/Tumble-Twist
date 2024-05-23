@@ -8,18 +8,22 @@ public class Ring : MonoBehaviour
     public int ringCount;
     private GameManager gm;
 
+    public float distance = 12.5f;
+    private float distanceIncrement = 5f;
+
     void Start()
     {
         gm = GameObject.FindObjectOfType<GameManager>();
     }
 
-    
+
     void Update()
     {
-        if (transform.position.y + 12.5f >= ball.position.y)
+        if (transform.position.y + distance >= ball.position.y)
         {
             Destroy(gameObject);
             gm.gameScore(25);
+            distance += distanceIncrement;
         }
     }
 }

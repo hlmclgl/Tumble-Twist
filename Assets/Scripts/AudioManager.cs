@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
 
+
     private void Awake()
     {
         if (Instance == null)
@@ -26,6 +27,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic("Theme");
+        LoadSettings();
     }
 
     public void PlayMusic(string name)
@@ -58,20 +60,54 @@ public class AudioManager : MonoBehaviour
     public void ToggleMusic()
     {
         musicSource.mute = !musicSource.mute;
+        SaveSettings();
     } 
     
     public void ToggleSFX()
     {
         sfxSource.mute = !sfxSource.mute;
+        SaveSettings();
     }
 
     public void MusicVolume(float volume)
     {
         musicSource.volume = volume;
+        SaveSettings();
     }
 
     public void SFXVolume(float volume)
     {
         sfxSource.volume = volume;
+        SaveSettings();
+    }
+
+    private void SaveSettings()
+    {
+        PlayerPrefs.SetFloat("MusicVolume", musicSource.volume);
+        PlayerPrefs.SetFloat("SFXVolume", sfxSource.volume);
+        PlayerPrefs.SetInt("MusicMuted", musicSource.mute ? 1 : 0);
+        PlayerPrefs.SetInt("SFXMuted", sfxSource.mute ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadSettings()
+    {
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            musicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
+        }
+        if (PlayerPrefs.HasKey("SFXVolume"))
+        {
+            sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume");
+        }
+        if (PlayerPrefs.HasKey("MusicMuted"))
+        {
+            musicSource.mute = PlayerPrefs.GetInt("MusicMuted") == 1;
+        }
+        if (PlayerPrefs.HasKey("SFXMuted"))
+        {
+            sfxSource.mute = PlayerPrefs.GetInt("SFXMuted") == 1;
+        }
+        
     }
 }

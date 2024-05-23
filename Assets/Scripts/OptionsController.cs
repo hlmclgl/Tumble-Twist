@@ -7,6 +7,11 @@ public class OptionsController : MonoBehaviour
 {
     public Slider _musicSlider, _sfxSlider;
 
+    private void Start()
+    {
+        LoadSettings();
+    }
+
     public void ToggleMusic()
     {
         AudioManager.Instance.ToggleMusic();
@@ -25,5 +30,17 @@ public class OptionsController : MonoBehaviour
     public void SFXVolume()
     {
         AudioManager.Instance.SFXVolume(_sfxSlider.value);
+    }
+
+    private void LoadSettings()
+    {
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            _musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        }
+        if (PlayerPrefs.HasKey("SFXVolume"))
+        {
+            _sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+        }
     }
 }
