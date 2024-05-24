@@ -16,6 +16,8 @@ public class GameUI_Manager : MonoBehaviour
     [SerializeField] private Transform endPoint; // The end point of the level
 
     private float totalDistance;
+    private int currentLevel ;
+    private int nextLevel ;
 
     void Start()
     {
@@ -25,12 +27,13 @@ public class GameUI_Manager : MonoBehaviour
             return;
         }
 
+        LoadLevelData();
+
         // Calculate the total distance
         totalDistance = Vector3.Distance(startPoint.position, endPoint.position);
 
         // Set initial level text values
-        currentLevelText.text = "1"; // Example current level
-        nextLevelText.text = "2"; // Example next level
+        UpdateLevelText();
 
         // Initialize the fill amount of the slider
         levelSliderFill.fillAmount = 0f;
@@ -57,5 +60,70 @@ public class GameUI_Manager : MonoBehaviour
 
         // Update the fill amount of the slider
         levelSliderFill.fillAmount = Mathf.Clamp01(progress);
+
+        if (progress >= 1f)
+        {
+            LevelCompleted();
+        }
     }
+
+    public void LevelCompleted()
+    {
+        // Increment the levels
+        currentLevel++;
+        nextLevel = currentLevel + 1;
+
+        SaveLevelData();
+
+        // Reset the ball position to the start point (or handle it as needed)
+        ball.position = startPoint.position;
+
+        // Update the progress bar
+        levelSliderFill.fillAmount = 0f;
+
+        // Update level text
+        UpdateLevelText();
+    }
+
+    private void UpdateLevelText()
+    {
+        currentLevelText.text = currentLevel.ToString();
+        nextLevelText.text = nextLevel.ToString();
+    }
+
+    private void SaveLevelData()
+    {
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        PlayerPrefs.SetInt("NextLevel", nextLevel);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadLevelData()
+    {
+        if (PlayerPrefs.HasKey("CurrentLevel") && PlayerPrefs.HasKey("NextLevel"))
+        {
+            currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+            nextLevel = PlayerPrefs.GetInt("NextLevel");
+        }
+        else
+        {
+            currentLevel = 1; // Starting level
+            nextLevel = 2; // Next level
+        }
+    }
+
+    public void ResetLevel()
+    {
+        currentLevel = 1;
+        nextLevel = currentLevel + 1;
+        SaveLevelData() ;
+    }
+
+    void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteKey("CurrentLevel");
+        PlayerPrefs.DeleteKey("NextLevel");
+    }
+
+
 }

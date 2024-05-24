@@ -7,8 +7,16 @@ using UnityEngine.UI;
 public class PauseButtonController : MonoBehaviour
 {
     public GameObject pauseMenu;
+    private GameManager gm;
+    private GameUI_Manager ui;
 
     private bool isPaused = false;
+
+    private void Start()
+    {
+        gm = GameObject.FindObjectOfType<GameManager>();
+        ui = GameObject.FindObjectOfType<GameUI_Manager>();
+    }
 
     public void OnPauseButtonClick()
     {
@@ -44,6 +52,8 @@ public class PauseButtonController : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        gm.ResetScore();
+        ui.ResetLevel();
         SceneManager.LoadScene("StartMenu"); // Ana menü sahnesine geçiþ yapar
     }
 
