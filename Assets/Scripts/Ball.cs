@@ -31,7 +31,7 @@ public class Ball : MonoBehaviour
 
         string metarialName = other.gameObject.GetComponent<MeshRenderer>().material.name;
         Debug.Log(metarialName);
-        if (metarialName == "Unsafe Color (Instance)")
+        if (metarialName == "Unsafe Color (Instance)" || metarialName == "Unsafe Color 2 (Instance)" || metarialName == "Unsafe Color 3 (Instance)" || metarialName == "Unsafe Color 5 (Instance)")
         {
             AudioManager.Instance.PlaySFX("GameOver");
             gm.GameOver();

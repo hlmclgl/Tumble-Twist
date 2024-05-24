@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
 
     public int score;
+    public int levelStartScore;
     public Text scoreText;
     public Text scoreNumberText;
     public GameObject gameOverUI;
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
         finishUI.SetActive(false);
         homeUI.SetActive(true);
         pauseButton.SetActive(false);
+
+        LoadScore();
     }
 
     private void Update()
@@ -52,10 +55,13 @@ public class GameManager : MonoBehaviour
     {
         score += ringScore;
         scoreText.text = score.ToString();
+        SaveScore();
     }
 
     public void restartGame()
     {
+        score = levelStartScore;
+        SaveScore();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -78,7 +84,44 @@ public class GameManager : MonoBehaviour
     {
         finishUI.SetActive(true);
         pauseButton.SetActive(false ) ;
+        SaveLevelScore();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
+    }
+
+    private void SaveScore()
+    {
+        PlayerPrefs.SetInt("CurrentScore", score);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadScore()
+    {
+        if (PlayerPrefs.HasKey("CurrentScore"))
+        {
+            score = PlayerPrefs.GetInt("CurrentScore");
+            scoreText.text = score.ToString();
+        }
+
+        if (PlayerPrefs.HasKey("LevelStartScore"))
+        {
+            levelStartScore = PlayerPrefs.GetInt("LevelStartScore");
+        }
+        else
+        {
+            levelStartScore = score;
+        }
+    }
+
+    private void SaveLevelScore()
+    {
+        PlayerPrefs.SetInt("LevelStartScore", score);
+        PlayerPrefs.Save();
+    }
+
+    void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteKey("CurrentScore");
+        PlayerPrefs.DeleteKey("LevelStartScore");
     }
 }
