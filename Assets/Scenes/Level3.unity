@@ -347,6 +347,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3405025126174399186, guid: 0ac976b3d79dc8849b72905ebe2388ab, type: 3}
   m_PrefabInstance: {fileID: 1029373442}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1229583125 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5467546844292163646, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
+  m_PrefabInstance: {fileID: 1684515532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1355299267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8082414368309123813, guid: 4486ba3866212e445896feda4cb4ed6e, type: 3}
@@ -451,6 +462,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1684515533}
     - target: {fileID: 4985724876094297957, guid: 7b5fafdfc5e2cc14795b442431ab0bb9, type: 3}
+      propertyPath: finishLevelText
+      value: 
+      objectReference: {fileID: 1229583125}
+    - target: {fileID: 4985724876094297957, guid: 7b5fafdfc5e2cc14795b442431ab0bb9, type: 3}
       propertyPath: scoreNumberText
       value: 
       objectReference: {fileID: 1684515536}
@@ -511,6 +526,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230655501423928545, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
+      propertyPath: m_Name
+      value: Finish Level Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241394695136422882, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3565426102483136200, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
       propertyPath: m_Name
       value: GameUI 1
@@ -607,6 +630,10 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1029373443}
+    - target: {fileID: 9002166798781363120, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
+      propertyPath: finishLevelText
+      value: 
+      objectReference: {fileID: 1229583125}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -756,11 +783,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6183114588333163113, guid: ff4327c55c5ed064b9366d5eedab132e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.01
+      value: 28.25
       objectReference: {fileID: 0}
     - target: {fileID: 6183114588333163113, guid: ff4327c55c5ed064b9366d5eedab132e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.89
+      value: -9.54
       objectReference: {fileID: 0}
     - target: {fileID: 6183114588333163113, guid: ff4327c55c5ed064b9366d5eedab132e, type: 3}
       propertyPath: m_LocalRotation.w

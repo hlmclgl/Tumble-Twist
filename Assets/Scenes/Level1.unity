@@ -308,6 +308,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230655501423928545, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
+      propertyPath: m_Name
+      value: Finish Level Text
+      objectReference: {fileID: 0}
     - target: {fileID: 3565426102483136200, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
       propertyPath: m_Name
       value: GameUI
@@ -404,11 +408,26 @@ PrefabInstance:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 755029026}
+    - target: {fileID: 9002166798781363120, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
+      propertyPath: finishLevelText
+      value: 
+      objectReference: {fileID: 93747425564274984}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
+--- !u!114 &93747425564274984 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5467546844292163646, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
+  m_PrefabInstance: {fileID: 93747425564274983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &368764259781232219 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4924535467433297101, guid: c7e416b5b5e60854f8c0ee2e6992641c, type: 3}
@@ -821,6 +840,10 @@ PrefabInstance:
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 8121035644533993669}
+    - target: {fileID: 4985724876094297957, guid: 7b5fafdfc5e2cc14795b442431ab0bb9, type: 3}
+      propertyPath: finishLevelText
+      value: 
+      objectReference: {fileID: 93747425564274984}
     - target: {fileID: 4985724876094297957, guid: 7b5fafdfc5e2cc14795b442431ab0bb9, type: 3}
       propertyPath: scoreNumberText
       value: 

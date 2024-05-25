@@ -14,6 +14,8 @@ public class GameUI_Manager : MonoBehaviour
     [SerializeField] private Transform ball; // The ball object
     [SerializeField] private Transform startPoint; // The starting point of the level
     [SerializeField] private Transform endPoint; // The end point of the level
+    [SerializeField] private Text finishLevelText;
+
 
     private float totalDistance;
     private int currentLevel ;
@@ -72,6 +74,7 @@ public class GameUI_Manager : MonoBehaviour
         // Increment the levels
         currentLevel++;
         nextLevel = currentLevel + 1;
+        
 
         SaveLevelData();
 
@@ -89,6 +92,9 @@ public class GameUI_Manager : MonoBehaviour
     {
         currentLevelText.text = currentLevel.ToString();
         nextLevelText.text = nextLevel.ToString();
+
+        int finishLevel = currentLevel - 1;
+        finishLevelText.text = "LEVEL " + finishLevel.ToString();
     }
 
     private void SaveLevelData()

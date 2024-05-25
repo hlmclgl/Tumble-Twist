@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
 
     private bool isGameStarted = false;
-
+    private bool isLevelCompleted = false;
     void Start()
     {
         Time.timeScale = 0f;
@@ -31,6 +31,12 @@ public class GameManager : MonoBehaviour
 
         LoadScore();
         LoadBestScore();
+
+        if (PlayerPrefs.HasKey("LevelCompleted"))
+        {
+            PlayerPrefs.DeleteKey("LevelCompleted"); // Tamamlandýðýný belirten kaydý siliyoruz
+            ShowFinishUI(); // FinishUI ekranýný gösteriyoruz
+        }
     }
 
     private void Update()
@@ -45,6 +51,10 @@ public class GameManager : MonoBehaviour
             if (gameOverUI.activeSelf)
             {
                 restartGame();
+            }
+            else if (finishUI.activeSelf && isLevelCompleted)
+            {
+                StartGame();
             }
         }
     }
@@ -79,6 +89,7 @@ public class GameManager : MonoBehaviour
     {
         isGameStarted = true;
         homeUI.SetActive(false);
+        finishUI.SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
     }
@@ -96,6 +107,7 @@ public class GameManager : MonoBehaviour
         finishUI.SetActive(true);
         pauseButton.SetActive(false ) ;
 
+
         GameUI_Manager gameUIManager = FindObjectOfType<GameUI_Manager>();
         if (gameUIManager != null)
         {
@@ -103,8 +115,15 @@ public class GameManager : MonoBehaviour
         }
 
         SaveLevelScore();
+        PlayerPrefs.SetInt("LevelCompleted", 1); // Level tamamlandýðýný kaydediyoruz
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
+    }
+
+    private void ShowFinishUI() // Yeni metod: FinishUI ekranýný gösterir ve level tamamlandýðýný belirtir
+    {
+        finishUI.SetActive(true);
+        isLevelCompleted = true;
     }
 
     private void SaveScore()
