@@ -11,10 +11,11 @@ public class GameUI_Manager : MonoBehaviour
     [SerializeField] private Text currentLevelText; // Text for the current level
     [SerializeField] private Image nextLevelImage; // Image that contains next level text
     [SerializeField] private Text nextLevelText; // Text for the next level
+    [SerializeField] private Text finishLevelText;
     [SerializeField] private Transform ball; // The ball object
     [SerializeField] private Transform startPoint; // The starting point of the level
     [SerializeField] private Transform endPoint; // The end point of the level
-    [SerializeField] private Text finishLevelText;
+    
 
 
     private float totalDistance;
