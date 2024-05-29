@@ -12,6 +12,7 @@ public class Ball : MonoBehaviour
 
     void Start()
     {
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
         gm = GameObject.FindObjectOfType<GameManager>();
     }
 
@@ -23,6 +24,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        rb.velocity = Vector3.zero;
         rb.AddForce(Vector3.up * jumpForce);
         AudioManager.Instance.PlaySFX("Jump");
         GameObject splash = Instantiate(splashImg, transform.position - new Vector3(0, 0.22f, 0f), transform.rotation);
@@ -33,6 +35,7 @@ public class Ball : MonoBehaviour
         Debug.Log(metarialName);
         if (metarialName == "Unsafe Color (Instance)" || metarialName == "Unsafe Color 2 (Instance)" || metarialName == "Unsafe Color 3 (Instance)" || metarialName == "Unsafe Color 5 (Instance)")
         {
+            AudioManager.Instance.PauseMusic();
             AudioManager.Instance.PlaySFX("BallDied");
             gm.GameOver();
             AudioManager.Instance.PlaySFX("GameOver");
@@ -41,6 +44,7 @@ public class Ball : MonoBehaviour
         }
         else if (metarialName == "Finish (Instance)")
         {
+            AudioManager.Instance.PauseMusic();
             AudioManager.Instance.PlaySFX("MissionComplete");
             gm.NextLevel();
             rb.velocity = Vector3.zero;

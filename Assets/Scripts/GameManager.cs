@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
         score = levelStartScore;
         SaveScore();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager.Instance.UnPauseMusic();
     }
 
     private void StartGame()
@@ -92,6 +93,7 @@ public class GameManager : MonoBehaviour
         finishUI.SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
+        AudioManager.Instance.UnPauseMusic();
     }
 
     public void GameOver()
@@ -106,7 +108,7 @@ public class GameManager : MonoBehaviour
     {
         finishUI.SetActive(true);
         pauseButton.SetActive(false ) ;
-
+        AudioManager.Instance.PauseMusic();
 
         GameUI_Manager gameUIManager = FindObjectOfType<GameUI_Manager>();
         if (gameUIManager != null)
@@ -117,7 +119,6 @@ public class GameManager : MonoBehaviour
         SaveLevelScore();
         PlayerPrefs.SetInt("LevelCompleted", 1); // Level tamamlandýðýný kaydediyoruz
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
     }
 
     private void ShowFinishUI() // Yeni metod: FinishUI ekranýný gösterir ve level tamamlandýðýný belirtir

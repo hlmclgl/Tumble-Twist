@@ -21,7 +21,7 @@ public class Main_Menu : MonoBehaviour
     public void mainMenu()
     {
         AudioManager.Instance.PlaySFX("Exit");
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("StartMenu");
     }
 
     public void settingsMenu()

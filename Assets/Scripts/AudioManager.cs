@@ -81,6 +81,16 @@ public class AudioManager : MonoBehaviour
         SaveSettings();
     }
 
+    public void PauseMusic()
+    {
+        musicSource.Pause();
+    }
+
+    public void UnPauseMusic()
+    {
+        musicSource.UnPause();
+    }
+
     private void SaveSettings()
     {
         PlayerPrefs.SetFloat("MusicVolume", musicSource.volume);

@@ -3493,6 +3493,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3639065657452986241, guid: 4486ba3866212e445896feda4cb4ed6e, type: 3}
+      propertyPath: jumpForce
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6049858970471588180, guid: 4486ba3866212e445896feda4cb4ed6e, type: 3}
       propertyPath: m_Name
       value: Ball
