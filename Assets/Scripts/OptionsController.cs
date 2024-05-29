@@ -14,11 +14,13 @@ public class OptionsController : MonoBehaviour
 
     public void ToggleMusic()
     {
+        AudioManager.Instance.PlaySFX("Music");
         AudioManager.Instance.ToggleMusic();
     }
 
     public void ToggleSFX()
     {
+        AudioManager.Instance.PlaySFX("SFX");
         AudioManager.Instance.ToggleSFX();
     }
 

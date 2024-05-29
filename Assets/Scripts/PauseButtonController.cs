@@ -39,6 +39,7 @@ public class PauseButtonController : MonoBehaviour
 
     private void ResumeGame()
     {
+        AudioManager.Instance.PlaySFX("Play");
         Time.timeScale = 1f; // Oyunu devam ettir
         pauseMenu.SetActive(false);
         isPaused = false;
@@ -46,12 +47,14 @@ public class PauseButtonController : MonoBehaviour
 
     public void RestartGame()
     {
+        AudioManager.Instance.PlaySFX("Restart");
         Time.timeScale = 1f; // Zamaný tekrar baþlat
         restartGame();
     }
 
     public void GoToMainMenu()
     {
+        AudioManager.Instance.PlaySFX("MainMenu");
         gm.ResetScore();
         ui.ResetLevel();
         SceneManager.LoadScene("StartMenu"); // Ana menü sahnesine geçiþ yapar
@@ -64,11 +67,13 @@ public class PauseButtonController : MonoBehaviour
 
     public void ToggleMusic()
     {
+        AudioManager.Instance.PlaySFX("Music");
         AudioManager.Instance.ToggleMusic();
     }
 
     public void ToggleSFX()
     {
+        AudioManager.Instance.PlaySFX("SFX");
         AudioManager.Instance.ToggleSFX();
     }
 

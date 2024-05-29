@@ -33,8 +33,9 @@ public class Ball : MonoBehaviour
         Debug.Log(metarialName);
         if (metarialName == "Unsafe Color (Instance)" || metarialName == "Unsafe Color 2 (Instance)" || metarialName == "Unsafe Color 3 (Instance)" || metarialName == "Unsafe Color 5 (Instance)")
         {
-            AudioManager.Instance.PlaySFX("GameOver");
+            AudioManager.Instance.PlaySFX("BallDied");
             gm.GameOver();
+            AudioManager.Instance.PlaySFX("GameOver");
             rb.velocity = Vector3.zero;
             rb.isKinematic = true;
         }

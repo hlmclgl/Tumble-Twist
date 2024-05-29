@@ -9,6 +9,7 @@ public class Main_Menu : MonoBehaviour
 
     public void playGame()
     {
+        AudioManager.Instance.PlaySFX("Play");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -19,12 +20,13 @@ public class Main_Menu : MonoBehaviour
 
     public void mainMenu()
     {
+        AudioManager.Instance.PlaySFX("Exit");
         SceneManager.LoadScene("Main Menu");
     }
 
     public void settingsMenu()
     {
-        SceneManager.LoadScene("Options Menu");
+        AudioManager.Instance.PlaySFX("Options");
     }
 
     
