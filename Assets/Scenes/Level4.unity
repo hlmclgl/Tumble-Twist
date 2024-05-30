@@ -980,6 +980,10 @@ PrefabInstance:
       propertyPath: ball
       value: 
       objectReference: {fileID: 224283927}
+    - target: {fileID: 5308574635344031853, guid: 0c6c0586978d11d47b9bccfd01f1bcb7, type: 3}
+      propertyPath: rotateSpeed
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 5366156487148744491, guid: 0c6c0586978d11d47b9bccfd01f1bcb7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

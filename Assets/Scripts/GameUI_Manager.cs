@@ -5,22 +5,21 @@ using UnityEngine.UI;
 
 public class GameUI_Manager : MonoBehaviour
 {
-    [SerializeField] private Image levelSlider; // Main image of the slider
-    [SerializeField] private Image levelSliderFill; // Fill image of the slider
-    [SerializeField] private Image currentLevelImage; // Image that contains current level text
-    [SerializeField] private Text currentLevelText; // Text for the current level
-    [SerializeField] private Image nextLevelImage; // Image that contains next level text
-    [SerializeField] private Text nextLevelText; // Text for the next level
+    [SerializeField] private Image levelSlider; 
+    [SerializeField] private Image levelSliderFill; 
+    [SerializeField] private Image currentLevelImage; 
+    [SerializeField] private Text currentLevelText; 
+    [SerializeField] private Image nextLevelImage; 
+    [SerializeField] private Text nextLevelText; 
     [SerializeField] private Text finishLevelText;
-    [SerializeField] private Transform ball; // The ball object
-    [SerializeField] private Transform startPoint; // The starting point of the level
-    [SerializeField] private Transform endPoint; // The end point of the level
-    
+    [SerializeField] private Transform ball; 
+    [SerializeField] private Transform startPoint; 
+    [SerializeField] private Transform endPoint; 
 
 
     private float totalDistance;
-    private int currentLevel ;
-    private int nextLevel ;
+    private int currentLevel;
+    private int nextLevel;
 
     void Start()
     {
@@ -75,7 +74,7 @@ public class GameUI_Manager : MonoBehaviour
         // Increment the levels
         currentLevel++;
         nextLevel = currentLevel + 1;
-        
+
 
         SaveLevelData();
 
@@ -123,7 +122,7 @@ public class GameUI_Manager : MonoBehaviour
     {
         currentLevel = 1;
         nextLevel = currentLevel + 1;
-        SaveLevelData() ;
+        SaveLevelData();
     }
 
     void OnApplicationQuit()
