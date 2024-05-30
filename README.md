@@ -3,7 +3,7 @@
 
 <p align="center"><img src="https://i.hizliresim.com/t4zgedi.png" alt="project-image"></p>
 
-<p align="center"><img src="https://img.shields.io/github/issues/hlmclgl/Tumble-Twist.svg" alt="shields">  <img src="https://img.shields.io/github/stars/hlmclgl/Tumble-Twist.svg" alt="shields">  <img src="https://img.shields.io/github/forks/hlmclgl/Tumble-Twist.svg" alt="shields">  <img src="https://img.shields.io/badge/License-MIT-success.svg" alt="shields">  <img src="https://img.shields.io/github/watchers/hlmclgl/Tumble-Twist.svg" alt="shields">    <img src="https://img.shields.io/badge/Maintained%3F-yes-blue.svg" alt="shields"></p>
+<p align="center"><img src="https://img.shields.io/github/issues/hlmclgl/Tumble-Twist.svg" alt="shields">  <img src="https://img.shields.io/github/stars/hlmclgl/Kaira.svg" alt="shields">  <img src="https://img.shields.io/github/forks/hlmclgl/Tumble-Twist.svg" alt="shields">  <img src="https://img.shields.io/badge/License-MIT-success.svg" alt="shields">  <img src="https://img.shields.io/github/watchers/hlmclgl/Tumble-Twist.svg" alt="shields">    <img src="https://img.shields.io/badge/Maintained%3F-yes-blue.svg" alt="shields"></p>
 <p align="center"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="shields"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="shields"></p>
 
 <h2>Enjoy the game and happy twisting! </h2>
