@@ -131,7 +131,7 @@ Technologies used in the project:
 
 <h2>🛡️ License:</h2>
 
-This project is licensed under the This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the This project is licensed under the MIT License. See the [LICENSE](https://github.com/hlmclgl/Tumble-Twist/tree/main?tab=MIT-1-ov-file) file for more details.
 
 <h2>💖Contact</h2>
 
