@@ -17,7 +17,7 @@
 
 [For a more detailed demo video, click here. ](https://www.youtube.com/watch?v=7YPBOhfzvDU&t=13s)
 
-https://github.com/hlmclgl/Tumble-Twist/blob/main/Assets/Sprites/0531.mp4
+https://github.com/hlmclgl/Tumble-Twist/assets/77545449/d937c58e-1eea-45c2-a77d-58ea93e1559e
 
 <h2>Project Screenshots:</h2>
 
