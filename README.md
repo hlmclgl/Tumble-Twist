@@ -15,7 +15,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://www.youtube.com/watch?v=GwkDfBuI3YU](https://www.youtube.com/watch?v=GwkDfBuI3YU)
+[For a more detailed demo video, click here. ](https://www.youtube.com/watch?v=7YPBOhfzvDU&t=13s)
 
 <h2>Project Screenshots:</h2>
 
